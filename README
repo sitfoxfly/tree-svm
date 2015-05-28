@@ -1,0 +1,111 @@
+Tree-SVM: Tool for SVM optimization on tree data structures
+
+-----------------------------------------------------------
+
+OVERVIEW:
+
+Tree-SVM implements SMO decomposition algorithm from Fan et al JMLR 2005.
+
+Tree-SVM supports only binary classification by now. 
+Input trees must be encoded in the bracket notation, e.g., "(A (B (C) (D)) (E (F)))" represents the following tree:
+
+     A
+    / \
+   B   E
+  / \   \
+ C   D   F 
+
+where "A", "B", "C", "D", "E", "F" are corresponding node labels.
+
+Example of input file:
++1 (beats (clarity (on (#CAMERA))) (out) (easily) (clarity (on (#CAMERA))))
+-1 (#CAMERA (is (2.5 (same (as (that (on (#CAMERA))))) (wide))))
+
+Avaliable kernels:
+- Intersection kernel (counts the number of common labels for both input trees)
+- Subtree kernel (Vishwanathan and Smola, 2001)
+- Subset tree kernel (Collins and Duffy, 2002)
+- Partial tree kernel (Moschitti, 2006)
+- Skip-node kernel 
+- Linear Skip-node kernel
+- Lookahead Skip-node kernel
+
+-----------------------------------------------------------
+
+HOW TO CITE:
+
+If you use Tree-SVM in your research, please cite the following paper:
+
+Maksim Tkachenko and Hady W. Lauw. A Convolution Kernel Approach to Identifying Comparisons in Text, ACL 2015.
+
+The bibtex format is
+
+@inproceedings{tkachenko-lauw:2015,
+  author    = {Maksim Tkachenko and Hady W. Lauw},
+  title     = {A Convolution Kernel Approach to Identifying Comparisons in Text},
+  booktitle = {Proceedings of the 53nd Annual Meeting of the Association for Computational Linguistics},
+  year      = {2015},
+  publisher = {Association for Computational Linguistics},
+}
+
+If you use Subtree kernel, Subset tree kernel, or Partial tree kernel, please cite the corresponding papers.
+
+-----------------------------------------------------------
+
+BIBLIOGRAPHY:
+
+@article{fan:2005,
+ author = {Fan, Rong-En and Chen, Pai-Hsuen and Lin, Chih-Jen},
+ title = {Working Set Selection Using Second Order Information for Training Support Vector Machines},
+ journal = {J. Mach. Learn. Res.},
+ issue_date = {12/1/2005},
+ volume = {6},
+ month = dec,
+ year = {2005},
+ issn = {1532-4435},
+ pages = {1889--1918},
+ numpages = {30},
+ url = {http://dl.acm.org/citation.cfm?id=1046920.1194907},
+ acmid = {1194907},
+ publisher = {JMLR.org},
+} 
+
+@inproceedings{collins-duffy:2002,
+ author = {Michael Collins and Nigel Duffy},
+ title = {New Ranking Algorithms for Parsing and Tagging: Kernels over Discrete Structures, and the Voted Perceptron},
+ booktitle = {Proceedings of 40th Annual Meeting of the Association for Computational Linguistics},
+ month = {July},
+ year = {2002},
+ address = {Philadelphia, Pennsylvania, USA},
+ publisher = {Association for Computational Linguistics},
+ pages = {263--270},
+ url = {http://www.aclweb.org/anthology/P02-1034},
+ doi = {10.3115/1073083.1073128}
+}
+
+@incollection{smola-vishwanathan:2003,
+ title = {Fast Kernels for String and Tree Matching},
+ author = {Alex J. Smola and S.v.n. Vishwanathan},
+ booktitle = {Advances in Neural Information Processing Systems 15},
+ editor = {S. Becker and S. Thrun and K. Obermayer},
+ pages = {585--592},
+ year = {2003},
+ publisher = {MIT Press},
+ url = {http://papers.nips.cc/paper/2272-fast-kernels-for-string-and-tree-matching.pdf}
+}
+
+@incollection{moschitti:2006,
+ year={2006},
+ isbn={978-3-540-45375-8},
+ booktitle={Machine Learning: ECML 2006},
+ volume={4212},
+ series={Lecture Notes in Computer Science},
+ editor={Fürnkranz, Johannes and Scheffer, Tobias and Spiliopoulou, Myra},
+ doi={10.1007/11871842_32},
+ title={Efficient Convolution Kernels for Dependency and Constituent Syntactic Trees},
+ url={http://dx.doi.org/10.1007/11871842_32},
+ publisher={Springer Berlin Heidelberg},
+ author={Moschitti, Alessandro},
+ pages={318-329},
+ language={English}
+}

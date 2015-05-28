@@ -1,0 +1,9 @@
+FILES=Utils.fs ListSet.fs Tree.fs InterTree.fs SubSetTree.fs PartialTree.fs SkipNodeTree.fs SMO.fs Kernel.fs Main.fs
+
+COMPILER=fsc.exe
+PLATFORM=x86
+
+tree-svm.exe: ${FILES}
+	${COMPILER} --nologo --debug- --optimize+ --tailcalls+ --crossoptimize+ --standalone --target:exe --platform:${PLATFORM} -o:$@ ${FILES}
+	
+all: tree-svm.exe
