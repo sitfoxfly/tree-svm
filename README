@@ -26,9 +26,9 @@ Avaliable kernels:
 - Subtree kernel (Vishwanathan and Smola, 2001)
 - Subset tree kernel (Collins and Duffy, 2002)
 - Partial tree kernel (Moschitti, 2006)
-- Skip-node kernel 
-- Linear Skip-node kernel
-- Lookahead Skip-node kernel
+- Skip-node kernel (Tkachenko and Lauw, 2015)
+- Linear Skip-node kernel (Tkachenko and Lauw, 2015)
+- Lookahead Skip-node kernel (Tkachenko and Lauw, 2015)
 
 -----------------------------------------------------------
 
@@ -43,7 +43,7 @@ The bibtex format is
 @inproceedings{tkachenko-lauw:2015,
   author    = {Maksim Tkachenko and Hady W. Lauw},
   title     = {A Convolution Kernel Approach to Identifying Comparisons in Text},
-  booktitle = {Proceedings of the 53nd Annual Meeting of the Association for Computational Linguistics},
+  booktitle = {Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics},
   year      = {2015},
   publisher = {Association for Computational Linguistics},
 }
