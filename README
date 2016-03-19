@@ -21,7 +21,7 @@ Example of input file:
 +1 (beats (clarity (on (#CAMERA))) (out) (easily) (clarity (on (#CAMERA))))
 -1 (#CAMERA (is (2.5 (same (as (that (on (#CAMERA))))) (wide))))
 
-Avaliable kernels:
+Available kernels:
 - Intersection kernel (counts the number of common labels for both input trees)
 - Subtree kernel (Vishwanathan and Smola, 2001)
 - Subset tree kernel (Collins and Duffy, 2002)
@@ -100,7 +100,7 @@ BIBLIOGRAPHY:
  booktitle={Machine Learning: ECML 2006},
  volume={4212},
  series={Lecture Notes in Computer Science},
- editor={Fürnkranz, Johannes and Scheffer, Tobias and Spiliopoulou, Myra},
+ editor={FÃ¼rnkranz, Johannes and Scheffer, Tobias and Spiliopoulou, Myra},
  doi={10.1007/11871842_32},
  title={Efficient Convolution Kernels for Dependency and Constituent Syntactic Trees},
  url={http://dx.doi.org/10.1007/11871842_32},
